@@ -1,0 +1,51 @@
+@import '../../style/weui.wxss';
+@import '../../style/btn.wxss';
+@import '../../style/public-box.wxss';
+
+.box-navbar {
+  position: relative;
+  width:100%
+}
+
+.navbar-sign {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 8rpx;
+  border-radius: 4rpx ;
+  transition: all 0.5s ease;  
+}
+
+.box-show {
+  width: 100%;
+  height: 1px;
+  box-shadow: 0 1rpx 0rpx 2rpx #eee;
+}
+
+.weui-navbar__title {
+  position: relative;
+  z-index: 10;
+  overflow: visible;
+}
+.weui-navbar__title text{
+  position: absolute;
+  top:-5rpx;
+  right: -20rpx;
+  transform: translateX(100%);
+ background: #DA7649;
+ color:#fff;
+}
+.weui-navbar__title view {
+  position: absolute;
+  right: -15rpx;
+  top: -10rpx;
+  background: #c93b00;
+  color: white;
+  font-size: 20rpx;
+  border-radius: 50%;
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  z-index: -1;
+}

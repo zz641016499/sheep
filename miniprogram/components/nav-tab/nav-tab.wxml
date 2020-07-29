@@ -1,0 +1,11 @@
+<view>
+  <view class="box box-navbar white-bg" style="background-color: {{ bg }}">
+    <block wx:for="{{tabs}}" wx:key="index">
+      <view data-id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'font-red' : ''}}" bindtap="tabClick">
+        <view class="weui-navbar__title items-msg-text">{{item}}</view>
+      </view>
+    </block>
+    <view class="navbar-sign items-btn-confirm" style="width:{{sliderWidth}}px; transform: translateX({{windowWidth / tabs.length * activeIndex +windowWidth / tabs.length/2-sliderWidth/2}}px); -webkit-transform: translateX({{windowWidth /tabs.length * activeIndex + windowWidth / tabs.length/2-sliderWidth/2}}px);"></view>
+  </view>
+  <view wx:if="{{showBorder}}" class="box-show"></view>
+</view>

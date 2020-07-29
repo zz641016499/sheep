@@ -1,0 +1,57 @@
+<view class="me-page">
+	<view class="profile-header {{addHeight?'profile-header2':''}}">
+		<view class="avatar-url">
+			<open-data type="userAvatarUrl"></open-data>
+		</view>
+		<open-data type="userNickName" class="nickname"></open-data>
+	</view>
+	<view class="box box-between operation">
+		<view class="box-flex box-center box-colum">
+			<i class="iconfont icon-fabu"></i>
+			<text class="text">我的发布</text>
+		</view>
+		<view class="box-flex box-center box-colum">
+			<i class="iconfont icon-paperplane"></i>
+			<text class="text">我要发布</text>
+		</view>
+		<!-- <view class="box-flex box-center box-colum">
+			<i class="iconfont icon-tubiao_zhangwu"></i>
+			<text class="text">个人账务</text>
+		</view> -->
+
+	</view>
+	<view class="nav">
+		<view class="nav-item">
+			<navigator class="content" hover-class="none" url="/pages/profile-playhistory/profile-playhistory">
+				<i class="iconfont icon-liulanjilu"></i>
+				<text class="text">最近浏览</text>
+				<i class="iconfont icon-arrow-right"></i>
+			</navigator>
+		</view>
+			<view class="nav-item">
+			<navigator class="content" hover-class="none" url="/pages/profile-playhistory/profile-playhistory">
+				<i class="iconfont icon-dizhixinxi"></i>
+				<text class="text">通信地址</text>
+				<i class="iconfont icon-arrow-right"></i>
+			</navigator>
+		</view>
+		<view class="nav-item">
+			<view class="content" bind:tap="onTapQrCode">
+				<i class="iconfont icon-fankui"></i>
+				<text class="text">服务反馈</text>
+				<i class="iconfont icon-arrow-right"></i>
+			</view>
+		</view>
+
+		<view class="nav-item">
+			<view class="content" bind:tap="onTapQrCode">
+				<i class="iconfont icon-erweima"></i>
+				<text class="text">小程序码</text>
+				<i class="iconfont icon-arrow-right"></i>
+			</view>
+		</view>
+
+
+	</view>
+
+</view>

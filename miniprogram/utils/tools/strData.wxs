@@ -1,0 +1,68 @@
+var strDate = function(dateNum, sign, num) {
+  /**
+   * dateNum,为时间
+   * sig为隔离符
+   * num 为返回的类型
+   * 1 年月日 时：分：秒
+   * 2年月日 时：分
+   * 3年月日
+   * 4月日 时：分
+   * 5 时：分：秒
+   * 6 时：分
+   * 
+   */
+  if(typeof dateNum =="string"){
+    return dateNum;
+  }
+  if(!dateNum||dateNum<=0){
+    return ;
+  }
+    var _date = getDate(dateNum*1000);
+    if(!_date){
+      return dateNum;
+    }
+    var _sign = sign;
+    var _num = parseInt(num);
+    var _year = _date.getFullYear();
+  
+    var _month = _date.getMonth() + 1 > 9 ? _date.getMonth() + 1 : "0" +( _date.getMonth() + 1);
+  
+    var _day = _date.getDate() > 9 ? _date.getDate() : "0" + _date.getDate();
+  
+    var _hou = _date.getHours() > 9 ? _date.getHours() : "0" + _date.getHours();
+  
+    var _min = _date.getMinutes() > 9 ? _date.getMinutes() : "0" + _date.getMinutes();
+  
+    var _sec = _date.getSeconds() > 9 ? _date.getSeconds() : "0" + _date.getSeconds();
+  
+    var _strDate = '';
+  
+    switch (num) {
+      case 1:
+        _strDate = _year + _sign + _month + _sign + _day + " " + _hou + ":" + _min + ":" + _sec;
+        break;
+      case 2:
+        _strDate = _year + _sign + _month + _sign + _day + " " + _hou + ":" + _min;
+        break;
+      case 3:
+        _strDate = _year + _sign + _month + _sign + _day;
+        break;
+      case 4:
+        _strDate = _month + _sign + _day + " " + _hou + ":" + _min;
+        break;
+      case 5:
+        _strDate = _hou + ":" + _min + ":" + _sec;
+        break;
+        case 6:
+        _strDate = _hou+":"+_min;
+        break;
+        case 7:
+        _strDate = _min+":" +_sec;
+        break;
+    }
+  
+    return _strDate;
+  }
+  module.exports = {
+    strDate: strDate
+  }

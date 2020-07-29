@@ -1,0 +1,23 @@
+@import '../../style/weui.wxss';
+@import '../../style/public-box.wxss';
+
+.search-bar-box {
+  padding: 0 40rpx;
+}
+
+.search-bar-box .weui-search-bar {
+  border-top: 0;
+  /* border-bottom: 1rpx solid #eee; */
+  border-bottom: 0;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.search-bar-box .weui-search-bar__box {
+  background-color: #F7F7F7;
+  border-radius: 30rpx;
+}
+
+.search-bar-box .weui-search-bar__form {
+  border: 0;
+}

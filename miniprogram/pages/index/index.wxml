@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="profile-header {{addHeight?'profile-header2':''}}">
+      <view class="title">全民互惠</view>
+      <view class="describe textview-overflow">立志于解决局部生成过剩，实现全民互惠，促进个体经济发展。</view>
+      <view class="count box box-between"></view>
+      <view class="box box-colum top-products">
+        <view class="item box box-between">
+          <view class="left">
+            <image src="../../images/tabbar/home.png"></image>
+            <view>虚拟名字</view>
+          </view>
+          <view>两分钟前</view>
+        </view>
+        <view class="item box box-between">
+          <view class="left">
+            <image src="../../images/tabbar/home.png"></image>
+            <view>虚拟名字</view>
+          </view>
+          <view>两分钟前</view>
+        </view>
+         <view class="item box box-between">
+          <view class="left">
+            <image src="../../images/tabbar/home.png"></image>
+            <view>虚拟名字</view>
+          </view>
+          <view>两分钟前</view>
+        </view>
+      </view>
+	</view>
+  <view class="search-box">
+    <search-bar bind:clearkeyword="clearkeyword" bind:getkeyword="getkeyword" />
+  </view>
+
+</view>
