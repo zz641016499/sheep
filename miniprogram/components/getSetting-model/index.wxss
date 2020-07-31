@@ -1,0 +1,94 @@
+.mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 99999;
+}
+
+.mask .tips{
+  position: fixed;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 999991;
+  padding: 40rpx;
+  min-width: 420rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20rpx;
+  box-shadow: 0 1rpx 0rpx 2rpx #eee;
+}
+
+.icon-clear{
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+}
+
+.mask .tips button{
+  background-color: #FF5050 !important;
+  color: #fff;
+  padding: 6rpx 20rpx !important;
+  padding: 6rpx 20rpx !important;
+  margin-top: 20rpx !important;
+}
+
+.mask .content {
+  box-sizing: border-box;
+  padding: 48rpx 0;
+  border-radius: 40rpx;
+  width: 80%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mask .content image {
+  width: 450rpx;
+  height: 360rpx;
+}
+
+.mask .content .title {
+  font-size: 36rpx;
+  color: #333;
+}
+
+.mask .content .operation {
+  display: flex;
+  flex-direction: row;
+}
+
+.mask .content .operation button {
+  height: 76rpx !important;
+  line-height: 76rpx !important;
+  font-size: 40rpx !important;
+  padding: 0 60rpx !important;
+  border-radius: 38rpx !important;
+  background-color: #FF5050 !important;
+  color: #fff !important;
+}
+
+.mask .content .operation button:first-of-type {
+  margin-right: 50rpx !important;
+}
+
+.canvas-default-model {
+  width: 100%;
+  height: 600rpx;
+  position: fixed;
+  top: -9999999rpx;
+  left: -9999999rpx;
+}

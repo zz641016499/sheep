@@ -7,6 +7,7 @@ Page({
 
   onLoad: function () {
     let menu = wx.getMenuButtonBoundingClientRect();
+    
     if (menu.bottom + 20 > 90) {
       this.setData({
         addHeight:true
@@ -26,8 +27,35 @@ Page({
             }
           })
         }
-      }
+      },
     })
+    this.getLocation()
+  },
+  getLocation(){
+    wx.getLocation({
+      type: 'wgs84',
+      success (res) {
+        const latitude = res.latitude
+        const longitude = res.longitude
+        const speed = res.speed
+        const accuracy = res.accuracy
+        console.log(latitude,longitude,speed,accuracy,'pppppppppppppp',res,2);
+        
+      },
+      // fail:(err)=>{
+      //   setTimeout(()=>{
+      //     wx.openLocation({
+      //       latitude: 0,
+      //       longitude: 0,
+      //       scale:18
+      //     })
+      //   },3000)
+      
+      // },
+      complete:(res)=>{
+        console.log(res,1);
+      }
+     })
   },
   onReachBottom(){
    

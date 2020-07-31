@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    "search-bar": "../../components/search-bar/search-bar"
+    "search-bar": "../../components/search-bar/search-bar",
+    "getSetting-model": "../../components/getSetting-model/index"
+
   },
   "enablePullDownRefresh": true
 }

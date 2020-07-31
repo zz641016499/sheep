@@ -31,6 +31,7 @@
   <view class="search-box">
     <search-bar bind:clearkeyword="clearkeyword" bind:getkeyword="getkeyword" />
   </view>
+  <getSetting-model />
   <view class="current-product">
     <view class="item">
       

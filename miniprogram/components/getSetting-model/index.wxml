@@ -1,0 +1,7 @@
+	<view class="mask">
+		<view class="tips" catchtap="true" wx:if="{{showTips}}">
+			<view>{{title}}</view>
+			<icon class="icon-clear" type="clear" size="20" catchtap="closeTips"></icon>
+			<button open-type="openSetting" bindopensetting="handleSetting">重新授权</button>
+		</view>
+	</view>
