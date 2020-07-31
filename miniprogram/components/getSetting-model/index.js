@@ -4,17 +4,17 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    showTips:{
-      type:Boolean,
-      value:true
+    showTips: {
+      type: Boolean,
+      value: false
     },
-    title:{
-      type:String,
-      value:'获取当前位置授权'
+    title: {
+      type: String,
+      value: '获取当前位置授权'
     },
-    desc:{
-      type:String,
-      value:'当前功能必须获取您'
+    desc: {
+      type: String,
+      value: '当前功能必须获取您'
     }
   },
 
@@ -29,6 +29,14 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    closeTips() {
+      this.setData({
+        showTips: false
+      })
+    },
+    handleSetting(e) {
+      console.log(e);
 
+    }
   }
 })
