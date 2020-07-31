@@ -31,5 +31,13 @@
   <view class="search-box">
     <search-bar bind:clearkeyword="clearkeyword" bind:getkeyword="getkeyword" />
   </view>
+  <view class="current-product">
+    <view class="item">
+      
+    </view>
+  </view>
+   <view class="history-product">
+     <view class="item"></view>
+  </view>
 
 </view>
